@@ -1,7 +1,6 @@
 package com.rmgs.timesheetmanager.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.annotation.Id;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
