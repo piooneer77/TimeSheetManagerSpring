@@ -1,17 +1,17 @@
 package com.rmgs.timesheetmanager.repositories;
 
-import com.rmgs.timesheetmanager.models.User;
+import com.rmgs.timesheetmanager.models.Vacation;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends GenericRepository<User> {
+public interface VacationRepository extends GenericRepository<Vacation>{
 
     // <editor-fold defaultstate="collapsed" desc="Implemented Methods">
 
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Custom Query Methods">
-    User findByEmailAndMagic(String email, String magic);
+
     // </editor-fold>
 
 }

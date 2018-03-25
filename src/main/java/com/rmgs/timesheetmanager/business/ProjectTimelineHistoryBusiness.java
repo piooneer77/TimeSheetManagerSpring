@@ -1,15 +1,13 @@
 package com.rmgs.timesheetmanager.business;
 
-import com.rmgs.timesheetmanager.repositories.ProjectTimelineHistoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.rmgs.timesheetmanager.models.ProjectTimelineHistory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProjectTimelineHistoryBusiness {
+public class ProjectTimelineHistoryBusiness extends GenericBusiness<ProjectTimelineHistory> {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">
-    @Autowired
-    private  ProjectTimelineHistoryRepository projectTimelineHistoryRepository;
+
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Public Methods">

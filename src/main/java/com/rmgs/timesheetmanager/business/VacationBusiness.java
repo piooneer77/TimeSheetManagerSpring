@@ -1,10 +1,10 @@
 package com.rmgs.timesheetmanager.business;
 
-import com.rmgs.timesheetmanager.models.TimeSheetEntry;
+import com.rmgs.timesheetmanager.models.Vacation;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TimeSheetEntryBusiness extends GenericBusiness<TimeSheetEntry>{
+public class VacationBusiness extends GenericBusiness<Vacation> {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">
 
