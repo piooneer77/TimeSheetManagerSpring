@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -26,6 +25,11 @@ public class UserService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Post Methods">
+    @PostMapping(value = "login/{user}/{magic}")
+    public ResponseEntity<User> Login(@PathVariable String user, @PathVariable String magic){
+        return new ResponseEntity<User>(userBusiness.Login(user, magic), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/create")
     public ResponseEntity<User> Create(@RequestBody User user){
         return new ResponseEntity<User>(userBusiness.Create(user), HttpStatus.CREATED);

@@ -19,13 +19,13 @@ public class VacationService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Get Methods">
-    @GetMapping(value = "getall")
+    @GetMapping(value = "/getall")
     public ResponseEntity<List<Vacation>> GetAll(){
         return new ResponseEntity<List<Vacation>>(vacationBusiness.getAll(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/getbetweendates")
-    public ResponseEntity<List<Vacation>> GetBetweenDates(LocalDate fromDate, LocalDate toDate){
+    public ResponseEntity<List<Vacation>> GetBetweenDates(@RequestBody LocalDate fromDate,@RequestBody LocalDate toDate){
         return new ResponseEntity<List<Vacation>>(vacationBusiness.GetWithDateFromTo(fromDate, toDate), HttpStatus.OK);
     }
     // </editor-fold>
@@ -39,7 +39,7 @@ public class VacationService {
 
     // <editor-fold defaultstate="collapsed" desc="Delete Methods">
     @DeleteMapping(value = "/delete/{Id}")
-    public ResponseEntity Delete(Integer Id){
+    public ResponseEntity Delete(@PathVariable Integer Id){
         vacationBusiness.Delete(Id);
         return new ResponseEntity(HttpStatus.OK);
     }
