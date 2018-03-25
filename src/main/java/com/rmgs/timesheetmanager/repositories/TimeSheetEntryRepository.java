@@ -2,6 +2,7 @@ package com.rmgs.timesheetmanager.repositories;
 
 import com.rmgs.timesheetmanager.models.TimeSheetEntry;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
 public interface TimeSheetEntryRepository extends GenericRepository<TimeSheetEntry>{

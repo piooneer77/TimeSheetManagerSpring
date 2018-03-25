@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "/project")
 public class ProjectService {
@@ -14,6 +16,18 @@ public class ProjectService {
     // <editor-fold defaultstate="collapsed" desc="Properties">
     @Autowired
     private ProjectBusiness projectBusiness;
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Get Methods">
+    @GetMapping(value = "/getforuserid/{Id}")
+    public ResponseEntity<List<Project>> GetForUserId(@PathVariable Integer Id){
+        return new ResponseEntity<List<Project>>(projectBusiness.GetForUserId(Id), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/active")
+    public ResponseEntity<List<Project>> GetActive(){
+        return new ResponseEntity<List<Project>>(projectBusiness.GetActive(), HttpStatus.OK);
+    }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Post Methods">

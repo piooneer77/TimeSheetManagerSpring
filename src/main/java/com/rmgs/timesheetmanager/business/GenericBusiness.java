@@ -10,7 +10,7 @@ public class GenericBusiness<Generic> {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">
     @Autowired
-    private GenericRepository<Generic> genericRepository;
+    public GenericRepository<Generic> genericRepository;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Public Methods">
