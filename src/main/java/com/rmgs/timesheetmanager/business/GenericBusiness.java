@@ -2,10 +2,8 @@ package com.rmgs.timesheetmanager.business;
 
 import com.rmgs.timesheetmanager.repositories.GenericRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import java.util.List;
 
-@Component
 public class GenericBusiness<Generic> {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

@@ -1,9 +1,9 @@
 package com.rmgs.timesheetmanager.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.NoRepositoryBean;
 
-@Repository
+@NoRepositoryBean
 public interface GenericRepository<Generic> extends JpaRepository<Generic, Integer>{
 
     // <editor-fold defaultstate="collapsed" desc="Implemented Methods">
