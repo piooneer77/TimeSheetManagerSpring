@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table( name = "vacation_table" )
+@Table( name = "vacationtable" )
 public class Vacation {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

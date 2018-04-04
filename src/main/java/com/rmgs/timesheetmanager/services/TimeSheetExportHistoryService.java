@@ -25,7 +25,7 @@ public class TimeSheetExportHistoryService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Get Methods">
-    @GetMapping(value = "/frouserid/{Id}")
+    @GetMapping(value = "/frouserid/{Id}", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<List<TimeSheetExportHistory>> GetForUserId(Integer Id){
         return new ResponseEntity<List<TimeSheetExportHistory>>(timeSheetExportHistoryBusiness.GetByUserId(Id), HttpStatus.OK);
     }

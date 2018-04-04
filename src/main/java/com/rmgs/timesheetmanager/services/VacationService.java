@@ -19,26 +19,26 @@ public class VacationService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Get Methods">
-    @GetMapping(value = "/getall")
+    @GetMapping(value = "/getall", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<List<Vacation>> GetAll(){
         return new ResponseEntity<List<Vacation>>(vacationBusiness.getAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/getbetweendates")
+    @GetMapping(value = "/getbetweendates", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<List<Vacation>> GetBetweenDates(@RequestBody LocalDate fromDate,@RequestBody LocalDate toDate){
         return new ResponseEntity<List<Vacation>>(vacationBusiness.GetWithDateFromTo(fromDate, toDate), HttpStatus.OK);
     }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Post Methods">
-    @PostMapping(value = "/create")
+    @PostMapping(value = "/create", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<Vacation> Create(@RequestBody Vacation vacation){
         return new ResponseEntity<Vacation>(vacationBusiness.Create(vacation), HttpStatus.CREATED);
     }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Delete Methods">
-    @DeleteMapping(value = "/delete/{Id}")
+    @DeleteMapping(value = "/delete/{Id}", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity Delete(@PathVariable Integer Id){
         vacationBusiness.Delete(Id);
         return new ResponseEntity(HttpStatus.OK);

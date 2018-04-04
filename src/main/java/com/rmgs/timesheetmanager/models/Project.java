@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table( name = "project_table" )
+@Table( name = "projecttable" )
 public class Project {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

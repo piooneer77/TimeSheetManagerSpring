@@ -17,7 +17,7 @@ public class GenericBusiness<Generic> {
     }
 
     public Generic GetById(Integer Id){
-        return genericRepository.findById(Id).get();
+        return genericRepository.findOne(Id);
     }
 
     public Generic Create(Generic model){
@@ -29,7 +29,7 @@ public class GenericBusiness<Generic> {
     }
 
     public void Delete(Integer Id){
-        genericRepository.deleteById(Id);
+        genericRepository.delete(Id);
     }
     // </editor-fold>
 

@@ -12,6 +12,8 @@ public interface UserRepository extends GenericRepository<User> {
 
     // <editor-fold defaultstate="collapsed" desc="Custom Query Methods">
     User findByEmailAndMagic(String email, String magic);
+
+    User findByEmail(String email);
     // </editor-fold>
 
 }

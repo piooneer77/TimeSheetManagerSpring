@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.File;
 
 @Entity
-@Table( name = "savedfile_table" )
+@Table( name = "savedfiletable" )
 public class SavedFile {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

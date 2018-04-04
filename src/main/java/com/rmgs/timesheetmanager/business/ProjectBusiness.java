@@ -2,11 +2,6 @@ package com.rmgs.timesheetmanager.business;
 
 import com.rmgs.timesheetmanager.models.Project;
 import org.springframework.stereotype.Component;
-import sun.jvm.hotspot.memory.LoaderConstraintEntry;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.stream.Collectors;
 

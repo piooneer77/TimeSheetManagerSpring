@@ -23,7 +23,7 @@ public class TimeSheetEntryService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Get Methods">
-    @GetMapping(value = "/for/{Id}/withdates")
+    @GetMapping(value = "/for/{Id}/withdates", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<List<TimeSheetEntry>> GetAllForIdWithDates(@PathVariable Integer Id, @RequestBody LocalDate fromDate, @RequestBody LocalDate toDate){
         return new ResponseEntity<List<TimeSheetEntry>>(timeSheetEntryBusiness.GetByUserIdAndDateFromTo(Id, fromDate, toDate), HttpStatus.OK);
     }

@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table( name = "projecttimelinehistory_table" )
+@Table( name = "projecttimelinehistorytable" )
 public class ProjectTimelineHistory {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

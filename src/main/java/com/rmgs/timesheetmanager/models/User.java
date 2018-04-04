@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table( name = "user_table" )
+@Table( name = "usertable" )
 public class User {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">
@@ -34,6 +34,20 @@ public class User {
 
     // <editor-fold defaultstate="collapsed" desc="Constructors">
     public User() {
+    }
+
+    public User(User user){
+        this.Id = user.Id;
+        this.name = user.name;
+        this.email = user.email;
+        this.magic = user.magic;
+        this.createdAt = user.createdAt;
+        this.isActive = user.isActive;
+        this.isDeleted = user.isDeleted;
+        this.isSuspended = user.isSuspended;
+        this.linkedProjects = user.linkedProjects;
+        this.timeSheetEntries = user.timeSheetEntries;
+        this.timeSheetExportHistories = user.timeSheetExportHistories;
     }
 
     public User(String name, String email, String magic, LocalDateTime createdAt, Boolean isActive, Boolean isDeleted, Boolean isSuspended, List<Project> linkedProjects, List<TimeSheetEntry> timeSheetEntries, List<TimeSheetExportHistory> timeSheetExportHistories) {

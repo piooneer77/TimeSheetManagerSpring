@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table( name = "timesheetentry_table" )
+@Table( name = "timesheetentrytable" )
 public class TimeSheetEntry {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">

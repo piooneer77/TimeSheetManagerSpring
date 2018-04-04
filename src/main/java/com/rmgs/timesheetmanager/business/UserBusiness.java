@@ -36,11 +36,11 @@ public class UserBusiness {
     }
 
     public void Delete(Integer id) {
-        userRepository.deleteById(id);
+        userRepository.delete(id);
     }
 
     public User ResetPassword(Integer Id){
-        User user = userRepository.findById(Id).get();
+        User user = userRepository.findOne(Id);
         try {
             this.setPasswordToDefault(user);
         } catch (Exception e) {
@@ -50,7 +50,7 @@ public class UserBusiness {
     }
 
     public User Disable(Integer Id){
-        User user = userRepository.findById(Id).get();
+        User user = userRepository.findOne(Id);
         return this.Deactivate(user);
     }
     // </editor-fold>

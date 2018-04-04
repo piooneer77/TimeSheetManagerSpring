@@ -30,21 +30,21 @@ public class UserService {
         return new ResponseEntity<User>(userBusiness.Login(user, magic), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/create", produces = {"application/json"})
+    @PostMapping(value = "/create", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<User> Create(@RequestBody User user){
         return new ResponseEntity<User>(userBusiness.Create(user), HttpStatus.CREATED);
     }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Put Methods">
-    @PutMapping(value = "/update", produces = {"application/json"})
+    @PutMapping(value = "/update", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<User> Update(@RequestBody User user){
         return new ResponseEntity<User>(userBusiness.Update(user), HttpStatus.OK);
     }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Delete Methods">
-    @DeleteMapping(value = "/delete/{Id}", produces = {"application/json"})
+    @DeleteMapping(value = "/delete/{Id}", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity Delete(@PathVariable Integer Id){
         userBusiness.Delete(Id);
         return new ResponseEntity(HttpStatus.OK);
@@ -52,12 +52,12 @@ public class UserService {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Patch Methods">
-    @PatchMapping(value = "/disable/{Id}", produces = {"application/json"})
+    @PatchMapping(value = "/disable/{Id}", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<User> Disable(@PathVariable("Id") Integer Id){
         return new ResponseEntity<User>(userBusiness.Disable(Id), HttpStatus.OK);
     }
 
-    @PatchMapping(value = "/resetpassword/{Id}", produces = {"application/json"})
+    @PatchMapping(value = "/resetpassword/{Id}", produces = {"application/json"}, consumes = {"application/json"})
     public ResponseEntity<User> ResetPassword(Integer Id){
         return new ResponseEntity<User>(userBusiness.ResetPassword(Id), HttpStatus.OK);
     }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table( name = "timesheetexporthistory_table" )
+@Table( name = "timesheetexporthistorytable" )
 public class TimeSheetExportHistory {
 
     // <editor-fold defaultstate="collapsed" desc="Properties">
